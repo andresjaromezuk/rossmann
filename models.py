@@ -1,3 +1,4 @@
+
 import numpy
 numpy.random.seed(123)
 from sklearn import linear_model
@@ -12,7 +13,7 @@ from keras.models import Sequential
 from keras.models import Model as KerasModel
 from keras.layers import Input, Dense, Activation, Reshape
 from keras.layers import Concatenate
-from keras.layers.embeddings import Embedding
+from keras.layers import Embedding
 from keras.callbacks import ModelCheckpoint
 
 import pickle
@@ -301,3 +302,4 @@ class NN(Model):
     def guess(self, features):
         result = self.model.predict(features).flatten()
         return self._val_for_pred(result)
+# %%
